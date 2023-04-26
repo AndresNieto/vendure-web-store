@@ -22,8 +22,11 @@ const OrderContextProvider: FunctionComponent<OrderContextProviderProps> = ({ ch
 
   const updateOrderState = (newOrderState: IActiveOrder) => setOrderState(newOrderState);
 
+  const contextHasData = orderState !== INITAL_STATE;
+
   const defaultContext = {
     orderState,
+    contextHasData,
     updateOrderState,
   };
 

@@ -24,8 +24,8 @@ export const ADD_ITEM_TO_ORDER_MUTATION = gql`
             }
           }
         }
-        subTotal
-        subTotalWithTax
+        total
+        totalWithTax
       }
       ... on OrderLimitError {
         errorCode

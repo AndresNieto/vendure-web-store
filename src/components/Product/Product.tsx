@@ -51,7 +51,9 @@ const ProductComponent: FunctionComponent<ProductComponentProps> = ({ product })
 
   const handleAddItemToOrder = async () => {
     const { data: { addItemToOrder: newOrderState } } = await addItemToOrder(
-      { variables: { productId: variantSelected.id, qty: +productQuantity } });
+      {
+        variables: { productId: variantSelected.id, qty: +productQuantity }
+      });
     updateOrderState(newOrderState)
   }
 
@@ -65,7 +67,7 @@ const ProductComponent: FunctionComponent<ProductComponentProps> = ({ product })
   return (
     <>
       <ProductCard>
-        <Image src={featuredImage.preview} fullSize />
+        <Image src={featuredImage?.preview} fullSize />
         <ProductName>{title}</ProductName>
         <Accordion>
           <AccordionSummary

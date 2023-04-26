@@ -3,6 +3,7 @@ import { IActiveOrder } from '../models/IActiveOrder';
 
 export type OrderStateProps = {
   orderState: IActiveOrder;
+  contextHasData: Boolean;
   updateOrderState: (newOrderState: IActiveOrder) => void;
 }
 

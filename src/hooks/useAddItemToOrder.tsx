@@ -4,7 +4,10 @@ import { ADD_ITEM_TO_ORDER_MUTATION } from "../graphql/mutations/addItemToOrder.
 export const useAddItemToOrder = () => {
   const [addItemToOrder, { loading }] = useMutation(
     ADD_ITEM_TO_ORDER_MUTATION
-  ); return {
+  );
+
+
+  return {
     addItemToOrder,
     loading,
   }
